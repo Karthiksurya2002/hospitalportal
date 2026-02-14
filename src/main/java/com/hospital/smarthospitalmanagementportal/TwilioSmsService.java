@@ -10,25 +10,25 @@ import org.springframework.stereotype.Component;
 @Component
 public class TwilioSmsService {
 
-    @Value("${twilio.accountSid}")
-    private String accountSid;
-
-    @Value("${twilio.authToken}")
-    private String authToken;
-
-    @Value("${twilio.smsFrom}")
-    private String smsFrom;
-
-    @PostConstruct
-    public void init() {
-        Twilio.init(accountSid, authToken);
-    }
-
-    public void send( String text) {
-        Message.creator(
-                new PhoneNumber("+91" + "9080564314"),
-                new PhoneNumber(smsFrom),
-                text
-        ).create();
-    }
+//    @Value("${twilio.accountSid}")
+//    private String accountSid;
+//
+//    @Value("${twilio.authToken}")
+//    private String authToken;
+//
+//    @Value("${twilio.smsFrom}")
+//    private String smsFrom;
+//
+//    @PostConstruct
+//    public void init() {
+//        Twilio.init(accountSid, authToken);
+//    }
+//
+//    public void send( String text) {
+//        Message.creator(
+//                new PhoneNumber("+91" + "9080564314"),
+//                new PhoneNumber(smsFrom),
+//                text
+//        ).create();
+//    }
 }
